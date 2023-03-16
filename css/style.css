@@ -1,0 +1,143 @@
+body { 
+    color: #0A0DB3;
+    background-color: rgb(242, 157, 54);
+    font-family: 'Anton', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40pt;
+}
+
+header { 
+    text-align: center; 
+}
+
+/* Hero Style */
+#hero, footer {
+    text-align: center;
+    color: rgb(0, 26, 255);
+    background-color: rgb(214, 129, 0);
+    padding: 20px;
+    border: 4px solid #3c87fa;
+}
+
+#hero img {
+    width: 50vw;
+    max-width: 500px;
+    min-width: 300px;
+
+    border:5px solid #FFF;
+    border-bottom:50px solid #FFF;
+    background-clip:border-box;
+
+    background-color: #DB7835;
+    border-radius: 3vw;
+    box-shadow: 15px 15px 5px rgba(0,0,0,.5) inset,
+                15px 15px 5px rgba(0,0,0,.5);
+}
+
+/*Images*/
+
+#gallery img {
+    width: 200px;
+    height: 200px;
+}
+/* Biography */
+
+#bio{
+    display:flex;
+    flex-direction:column; 
+    align-items:center;
+}
+
+/* Hobbies */
+
+#hobbies {
+    display:flex;
+    flex-direction:column; 
+    align-items:center;
+    
+}
+
+#hobbies h2 { 
+   margin: .5ex 0px;
+}
+
+#hobbies {
+    text-align:center;
+    
+}
+
+#hobbies ul {
+    width:350px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#hobbies ul li {
+    text-align:left;
+}
+
+#hobbies ul li:nth-child(even) {
+    color: aqua;
+}
+/* Lit Section */
+#lit p:nth-child(odd)::first-letter {
+    color: black;
+    font-size: 230%;
+    padding: 0.5ex;
+    margin-right: .5ex;
+    font-weight:bold;
+    background-color: white;
+    text-shadow: 2px 2px;
+    box-shadow: 3px 3px;
+    border-top-left-radius: 45%;
+}
+#lit {
+    text-align: left;
+    margin:3em;
+}
+
+
+/* Media Queries*/ 
+
+@media screen and (min-width: 768px) {
+
+   #gallery * {
+    border:1px solid black;
+   }
+   #gallery figure {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+}
+#gallery figcaption {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#lit div{
+    max-width: 100%;
+    columns:30rem;
+}
+
+}
+
+@media screen and (min-wdith:1200px){
+
+#gallery {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#gallery hr {
+
+    display:none;
+}
+#gallery h2 {
+    grid-column:1/-1;
+}  
+#gallery figure {
+    display:block;
+}  
+}
